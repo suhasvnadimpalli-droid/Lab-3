@@ -53,7 +53,8 @@ jan_feb_flights
 
 ```{r}
 # which columns contain NA's
-
+  jan_feb_flights %>%
+  select_all(na.rm = TRUE)
 ```
 
 **Summary:**  
