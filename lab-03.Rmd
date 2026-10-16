@@ -34,18 +34,20 @@ Are there missing values?
 
 ```{r}
 # explore the types of the columns in jan_feb_flights
-
+jan_feb_flights
 ```
-
 ```{r}
 # which columns are integer
-
+  jan_feb_flights %>%
+    select(where(is.integer))
 
 # which columns are double
-
+  jan_feb_flights %>%
+    select(where(is.double))
 
 # which columns are character
-
+  jan_feb_flights %>%
+    select_if(is.character)
 
 ```
 
